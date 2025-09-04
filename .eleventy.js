@@ -1,22 +1,4 @@
 export default function(eleventyConfig) {
-  eleventyConfig.addPassthroughCopy({
-    "assets": "assets"
-  });
-
-  return {
-    dir: {
-      input: ".",
-      includes: "_includes",
-      data: "_data",
-      output: "_site"
-    },
-    markdownTemplateEngine: "njk",
-    htmlTemplateEngine: "njk",
-    dataTemplateEngine: "njk"
-  };
-}
-
-export default function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "assets": "assets" });
 
   // Slugify filter for form field names (handles Lithuanian chars & spaces)
@@ -30,6 +12,9 @@ export default function(eleventyConfig) {
 
   return {
     dir: { input: ".", includes: "_includes", data: "_data", output: "_site" },
+    markdownTemplateEngine: "njk",
+    htmlTemplateEngine: "njk",
+    dataTemplateEngine: "njk",
     templateFormats: ["njk", "md", "html"]
   };
 }
