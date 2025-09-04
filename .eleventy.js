@@ -1,4 +1,4 @@
-module.exports = function(eleventyConfig) {
+export default function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     "assets": "assets"
   });
@@ -14,7 +14,7 @@ module.exports = function(eleventyConfig) {
     htmlTemplateEngine: "njk",
     dataTemplateEngine: "njk"
   };
-};
+}
 
 export default function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "assets": "assets" });
