@@ -1,0 +1,9 @@
+<footer class="site-footer">
+  <p>{{ app.site.footer.addresses_line }}</p>
+  <p>
+    <a href="mailto:{{ app.site.footer.email }}">{{ app.site.footer.email }}</a> ·
+    <a href="tel:{{ app.site.footer.phone | replace(' ', '') }}">{{ app.site.footer.phone }}</a> ·
+    <a href="{{ app.site.footer.privacy_href }}">Privatumo politika</a>
+  </p>
+</footer>
+

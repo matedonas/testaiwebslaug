@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="{{ app.site.language | default('lt') }}">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{{ title or 'Slaugytojų kursai' }}</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/styles.css">
+  <style>
+    :root{
+      --c-primary: {{ app.styles.colors.primary }};
+      --c-primary-dark: {{ app.styles.colors.primaryDark }};
+      --c-secondary: {{ app.styles.colors.secondary }};
+      --c-accent: {{ app.styles.colors.accent }};
+      --c-success: {{ app.styles.colors.success }};
+      --c-error: {{ app.styles.colors.error }};
+      --c-n-900: {{ app.styles.colors.neutral["900"] }};
+      --c-n-700: {{ app.styles.colors.neutral["700"] }};
+      --c-n-500: {{ app.styles.colors.neutral["500"] }};
+      --c-n-200: {{ app.styles.colors.neutral["200"] }};
+      --c-n-50:  {{ app.styles.colors.neutral["50"] }};
+      --c-white: {{ app.styles.colors.white }};
+      --radius:  {{ app.styles.radius }}px;
+    }
+    body{font-family: {{ app.styles.fonts.body }}, system-ui, sans-serif;}
+    h1,h2,h3{font-family: {{ app.styles.fonts.heading }}, system-ui, sans-serif;}
+  </style>
+</head>
+<body>
+  {% include "components/header.njk" %}
+  <main class="container">
+    {{ content | safe }}
+  </main>
+  {% include "components/footer.njk" %}
+</body>
+</html>
+

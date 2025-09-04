@@ -1,0 +1,49 @@
+---
+layout: base.njk
+title: "Slaugytojų kursai"
+---
+{% set home = app.pages.home %}
+<section class="hero">
+  <h1>{{ home.hero.headline }}</h1>
+  <p>{{ home.hero.subheadline }}</p>
+  <div>
+    {% for c in home.hero.ctas %}
+      <a class="btn {{ c.style }}" href="{{ c.href }}">{{ c.label }}</a>
+    {% endfor %}
+  </div>
+  <img src="/assets/img/hero.jpg" alt="{{ home.hero.image_slot.alt }}">
+</section>
+
+<section>
+  <div class="usps">
+    {% for u in home.usps %}<span class="badge">{{ u }}</span>{% endfor %}
+  </div>
+</section>
+
+<section class="card">
+  <p>{{ home.locations_formats.lede }}</p>
+  <p>{% for c in home.locations_formats.cities %}{{ c }}{% if not loop.last %}, {% endif %}{% endfor %}</p>
+</section>
+
+{% if home.upcoming_dates and home.upcoming_dates.length %}
+<section class="card">
+  <h2>Artimiausios datos</h2>
+  <ul>
+    {% for d in home.upcoming_dates %}
+      <li><a href="{{ d.href }}">{{ d.city }} — {{ d.date }}</a></li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
+
+<section class="card">
+  <p><a href="{{ home.financing_teaser.href }}">{{ home.financing_teaser.line }}</a></p>
+  <p><a href="{{ home.competencijos_teaser.href }}">{{ home.competencijos_teaser.lede }}</a></p>
+</section>
+
+<section class="card">
+  <p>{{ home.cta_band.text }}</p>
+  <a class="btn primary" href="{{ home.cta_band.primary_cta.href }}">{{ home.cta_band.primary_cta.label }}</a>
+  <a class="btn secondary" href="{{ home.cta_band.secondary_cta.href }}">{{ home.cta_band.secondary_cta.label }}</a>
+</section>
+

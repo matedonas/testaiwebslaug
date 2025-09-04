@@ -1,0 +1,10 @@
+<header class="site-header">
+  <nav>
+    <ul>
+      {% for item in app.site.nav %}
+        <li><a href="{{ item.href }}">{{ item.label }}</a></li>
+      {% endfor %}
+    </ul>
+  </nav>
+</header>
+

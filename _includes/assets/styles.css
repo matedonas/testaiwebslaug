@@ -1,0 +1,13 @@
+*{box-sizing:border-box} body{margin:0;background:var(--c-n-50);color:var(--c-n-900)}
+.container{max-width:1080px;margin:0 auto;padding:24px}
+.site-header ul{display:flex;gap:16px;list-style:none;padding:12px 0;margin:0}
+a{color:var(--c-secondary);text-decoration:none} a:hover{text-decoration:underline}
+.btn{display:inline-block;padding:.75rem 1rem;border-radius:var(--radius);border:1px solid transparent}
+.btn.primary{background:var(--c-primary);color:#fff} .btn.secondary{border-color:var(--c-secondary);color:var(--c-secondary)}
+.card{background:#fff;border-radius:var(--radius);padding:16px;border:1px solid var(--c-n-200)}
+.grid{display:grid;gap:16px}
+.grid.cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.hero{display:grid;gap:16px;padding:24px;background:#fff;border-radius:var(--radius);border:1px solid var(--c-n-200)}
+.usps{display:flex;gap:12px;flex-wrap:wrap}
+.badge{background:var(--c-n-200);padding:.25rem .5rem;border-radius:999px}
+

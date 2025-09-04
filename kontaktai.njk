@@ -1,0 +1,13 @@
+---
+layout: base.njk
+title: "Kontaktai"
+---
+{% set pg = app.pages.kontaktai %}
+<p>{{ pg.lede }}</p>
+<p><a href="mailto:{{ pg.email }}">{{ pg.email }}</a> · <a href="tel:{{ pg.phone | replace(' ', '') }}">{{ pg.phone }}</a></p>
+<ul>
+  {% for a in pg.addresses %}
+    <li>{{ a.city }} — {{ a.address }}</li>
+  {% endfor %}
+</ul>
+
