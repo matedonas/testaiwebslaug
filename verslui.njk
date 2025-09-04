@@ -5,4 +5,5 @@ title: "Verslui"
 {% set pg = app.pages.verslui %}
 <p>{{ pg.lede }}</p>
 <p>{{ pg.addresses_line }}</p>
+<p><a class="btn secondary" href="{{ (pg.cta and pg.cta.href) or '/kontaktai' }}">{{ (pg.cta and pg.cta.label) or 'Susisiekti' }}</a></p>
 

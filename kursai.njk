@@ -5,7 +5,8 @@ title: "Kursai"
 {% set pg = app.pages.kursai %}
 <p>{{ pg.intro }}</p>
 <div class="grid cols-3">
-  {% for card in pg.city_cards %}
+  {% set cards = pg.cityCards or pg.city_cards %}
+  {% for card in cards %}
     <article class="card">
       <img src="/assets/img/city_{{ card.city | lower }}.jpg" alt="{{ card.image_slot.alt }}">
       <h3>{{ card.city }}</h3>

@@ -8,7 +8,8 @@ title: "Registracija"
 <form name="registracija" method="POST" netlify data-netlify="true" netlify-honeypot="bot-field" action="/thanks">
   <input type="hidden" name="form-name" value="registracija">
   <p style="display:none"><label>Don’t fill this out: <input name="bot-field"></label></p>
-  {% for f in pg.form_fields %}
+  {% set fields = pg.formFields or pg.form_fields %}
+  {% for f in fields %}
     <p><label>{{ f }}<br><input name="{{ f | slug }}" required></label></p>
   {% endfor %}
   <button class="btn primary" type="submit">Siųsti</button>

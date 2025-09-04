@@ -5,12 +5,13 @@ title: "Finansavimas"
 {% set pg = app.pages.finansavimas %}
 <p>{{ pg.lede }}</p>
 <div class="grid cols-3">
-  {% for opt in pg.options %}
+  {% set opts = pg.paths or pg.options %}
+  {% for opt in opts %}
     <div class="card">
       <h3>{{ opt.title }}</h3>
       <p>{{ opt.body }}</p>
     </div>
   {% endfor %}
 </div>
-<p><a class="btn secondary" href="{{ pg.contact_cta.href }}">{{ pg.contact_cta.label }}</a></p>
+<p><a class="btn secondary" href="{{ (pg.cta and pg.cta.href) or pg.contact_cta.href }}">{{ (pg.cta and pg.cta.label) or pg.contact_cta.label }}</a></p>
 

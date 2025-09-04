@@ -21,6 +21,9 @@
       "hero": {
         "headline": "Kasmet padedame 500+ asmenų įgyti slaugytojos padėjėjos profesinį diplomą bei rasti stabilų darbą ir Lietuvoje, ir užsienyje.",
         "subheadline": "Mokykitės mūsų centruose ar nuotoliu. Gaukite konsultaciją apie finansavimą.",
+        "subline": "Mokykitės mūsų centruose ar nuotoliu. Gaukite konsultaciją apie finansavimą.",
+        "primaryCta": {"label": "Registruokitės", "href": "/registracija"},
+        "secondaryCta": {"label": "Nemokama konsultacija", "href": "/kontaktai"},
         "ctas": [
           {"label": "Registruokitės", "href": "/registracija", "style": "primary"},
           {"label": "Nemokama konsultacija", "href": "/kontaktai", "style": "secondary"}
@@ -36,6 +39,10 @@
         "lede": "Nuotolinio mokymo grupės Kaune ir visoje Lietuvoje; hibridinio mokymo grupės Klaipėdoje, Šiauliuose, Panevėžyje ir Alytuje.",
         "cities": ["Vilnius", "Kaunas", "Klaipėda", "Šiauliai", "Panevėžys", "Alytus"]
       },
+      "locationsFormats": {
+        "lede": "Galima registruotis ir į nuotolinio mokymo grupes Kaune ir visoje Lietuvoje bei hibridinio mokymo grupes Klaipėdoje, Šiauliuose, Panevėžyje ir Alytuje.",
+        "cities": ["Vilnius", "Kaunas", "Klaipėda", "Šiauliai", "Panevėžys", "Alytus"]
+      },
       "upcoming_dates": [
         {"city": "Vilnius", "date": "rugpjūčio 26", "href": "/registracija"}
       ],
@@ -43,8 +50,16 @@
         "line": "Kursai gali būti finansuojami Užimtumo tarnybos arba galite susimokėti patys.",
         "href": "/finansavimas"
       },
+      "financingTeaser": {
+        "line": "Kursai gali būti finansuojami Užimtumo tarnybos arba galite susimokėti patys.",
+        "href": "/finansavimas"
+      },
       "competencijos_teaser": {
         "lede": "Norintiems pradėti karjerą slaugytojo padėjėjo pareigose – kelias per formalias profesinio mokymo programas.",
+        "href": "/slaugytojo-padejejo-kompetencijos"
+      },
+      "competenciesTeaser": {
+        "line": "Slaugytojų padėjėjų darbo funkcijos yra svarbios – sužinokite kompetencijas.",
         "href": "/slaugytojo-padejejo-kompetencijos"
       },
       "cta_band": {
@@ -63,6 +78,14 @@
         {"city": "Panevėžys", "image_slot": {"role": "city", "ratio": "3:2", "alt": "Panevėžys"}},
         {"city": "Alytus", "image_slot": {"role": "city", "ratio": "3:2", "alt": "Alytus"}}
       ],
+      "cityCards": [
+        {"city": "Vilnius", "image_slot": {"role": "city", "ratio": "3:2", "alt": "Vilnius"}},
+        {"city": "Kaunas", "image_slot": {"role": "city", "ratio": "3:2", "alt": "Kaunas"}},
+        {"city": "Klaipėda", "image_slot": {"role": "city", "ratio": "3:2", "alt": "Klaipėda"}},
+        {"city": "Šiauliai", "image_slot": {"role": "city", "ratio": "3:2", "alt": "Šiauliai"}},
+        {"city": "Panevėžys", "image_slot": {"role": "city", "ratio": "3:2", "alt": "Panevėžys"}},
+        {"city": "Alytus", "image_slot": {"role": "city", "ratio": "3:2", "alt": "Alytus"}}
+      ],
       "cta": {"label": "Registruokitės", "href": "/registracija"}
     },
     "finansavimas": {
@@ -71,16 +94,23 @@
         {"title": "Per Užimtumo tarnybą", "body": "Trumpas žingsnių aprašas, kokius dokumentus reikia pateikti."},
         {"title": "Savomis lėšomis", "body": "Galimybė mokėti dalimis; sąlygos ir terminai."}
       ],
-      "contact_cta": {"label": "Gauti konsultaciją", "href": "/kontaktai"}
+      "paths": [
+        {"title": "Per Užimtumo tarnybą", "body": "Žingsniai ir dokumentai (UT skyrimas, sąlygos)."},
+        {"title": "Savomis lėšomis", "body": "Mokėjimo tvarka / dalimis (jei taikoma)."}
+      ],
+      "contact_cta": {"label": "Gauti konsultaciją", "href": "/kontaktai"},
+      "cta": {"label": "Gauti konsultaciją", "href": "/kontaktai"}
     },
     "registracija": {
       "lede": "Registruokitės! Užsiregistruokite, ir mes su Jumis susisieksime per 1–2 darbo dienas.",
       "form_fields": ["Vardas", "Pavardė", "El. paštas", "Telefonas", "Miestas", "Pageidaujama mokymų forma", "Žinutė"],
+      "formFields": ["Vardas", "Pavardė", "El. paštas", "Telefonas", "Miestas", "Mokymų forma", "Žinutė"],
       "upcoming_dates": []
     },
     "verslui": {
-      "lede": "Kviečiame su mumis susisiekti dėl darbuotojų apmokymo. Bendradarbiaujame su sveikatos priežiūros įstaigomis.",
-      "addresses_line": "Bistryčios g. 13, Vilnius / Kalantos g. 19, Kaunas / Jūros g. 4, Klaipėda / Vilniaus g. 88, Šiauliai / Savanorių a. 13, Panevėžys / Naujoji g. 3, Alytus"
+      "lede": "Kviečiame sveikatos priežiūros įstaigas dėl darbuotojų apmokymo.",
+      "addresses_line": "Bistryčios g. 13, Vilnius / Kalantos g. 19, Kaunas / Jūros g. 4, Klaipėda / Vilniaus g. 88, Šiauliai / Savanorių a. 13, Panevėžys / Naujoji g. 3, Alytus",
+      "cta": {"label": "Susisiekti", "href": "/kontaktai"}
     },
     "kontaktai": {
       "lede": "Susisiekime! Paskambinkite arba parašykite mums ir gaukite nemokamą konsultaciją apie programą ir finansavimą.",
@@ -97,10 +127,12 @@
       "map_embed": null
     },
     "privatumo_politika": {
-      "disclosure_sample": "Įstatymo numatyta tvarka pasiliekame teisę atskleisti jūsų asmeninius duomenis..."
+      "disclosure_sample": "Įstatymo numatyta tvarka pasiliekame teisę atskleisti jūsų asmeninius duomenis...",
+      "body": "GDPR policy text."
     },
     "kompetencijos": {
-      "overview": "Norintiems pradėti karjerą slaugytojo padėjėjo pareigose, būtina baigti atitinkamas profesinio mokymo programas...",
+      "overview": "Slaugytojų padėjėjų darbo funkcijos yra labai svarbios, jos turi artimą kontaktą su pacientais ir atlieka įvairias užduotis...",
+      "sections": ["Atsakomybės", "Reikalingos savybės", "Karjeros kelias"],
       "links": []
     }
   },
@@ -121,8 +153,8 @@
       },
       "white": "#FFFFFF"
     },
-    "fonts": {"heading": "Inter", "body": "Inter", "mono": "Roboto Mono"},
-    "radius": 12
+    "fonts": {"heading": "Poppins", "body": "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif", "mono": "Source Code Pro"},
+    "radius": 20
   },
   "media_slots": [
     {"id": "hero", "where": "Home hero", "size": "1920x1080", "ratio": "16:9", "alt": "Slaugytojų padėjėjų mokymai vyksta klasėse ir nuotoliu"},

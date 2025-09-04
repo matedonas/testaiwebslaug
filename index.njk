@@ -5,11 +5,14 @@ title: "Slaugytojų kursai"
 {% set home = app.pages.home %}
 <section class="hero">
   <h1>{{ home.hero.headline }}</h1>
-  <p>{{ home.hero.subheadline }}</p>
+  <p>{{ home.hero.subline or home.hero.subheadline }}</p>
   <div>
-    {% for c in home.hero.ctas %}
-      <a class="btn {{ c.style }}" href="{{ c.href }}">{{ c.label }}</a>
-    {% endfor %}
+    {% if home.hero.primaryCta %}
+      <a class="btn primary" href="{{ home.hero.primaryCta.href }}">{{ home.hero.primaryCta.label }}</a>
+    {% endif %}
+    {% if home.hero.secondaryCta %}
+      <a class="btn secondary" href="{{ home.hero.secondaryCta.href }}">{{ home.hero.secondaryCta.label }}</a>
+    {% endif %}
   </div>
   <img src="/assets/img/hero.jpg" alt="{{ home.hero.image_slot.alt }}">
 </section>
@@ -21,8 +24,8 @@ title: "Slaugytojų kursai"
 </section>
 
 <section class="card">
-  <p>{{ home.locations_formats.lede }}</p>
-  <p>{% for c in home.locations_formats.cities %}{{ c }}{% if not loop.last %}, {% endif %}{% endfor %}</p>
+  <p>{{ (home.locationsFormats and home.locationsFormats.lede) or home.locations_formats.lede }}</p>
+  <p>{% set locs = (home.locationsFormats and home.locationsFormats.cities) or home.locations_formats.cities %}{% for c in locs %}{{ c }}{% if not loop.last %}, {% endif %}{% endfor %}</p>
 </section>
 
 {% if home.upcoming_dates and home.upcoming_dates.length %}
@@ -37,8 +40,8 @@ title: "Slaugytojų kursai"
 {% endif %}
 
 <section class="card">
-  <p><a href="{{ home.financing_teaser.href }}">{{ home.financing_teaser.line }}</a></p>
-  <p><a href="{{ home.competencijos_teaser.href }}">{{ home.competencijos_teaser.lede }}</a></p>
+  <p><a href="{{ (home.financingTeaser and home.financingTeaser.href) or home.financing_teaser.href }}">{{ (home.financingTeaser and home.financingTeaser.line) or home.financing_teaser.line }}</a></p>
+  <p><a href="{{ (home.competenciesTeaser and home.competenciesTeaser.href) or (home.competencijos_teaser and home.competencijos_teaser.href) }}">{{ (home.competenciesTeaser and home.competenciesTeaser.line) or (home.competencijos_teaser and home.competencijos_teaser.lede) }}</a></p>
 </section>
 
 <section class="card">
