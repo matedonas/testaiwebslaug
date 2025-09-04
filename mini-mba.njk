@@ -1,0 +1,89 @@
+---
+layout: base.njk
+title: "Mini‑MBA"
+---
+{% set pg = app.pages.minimba %}
+<section class="hero">
+  <div>
+    <h1>{{ pg.hero.headline }}</h1>
+    <p>{{ pg.hero.subline }}</p>
+    <a class="btn primary" href="{{ pg.hero.primaryCta.href }}">{{ pg.hero.primaryCta.label }}</a>
+  </div>
+</section>
+
+<section class="card">
+  <h2>Programų apžvalga</h2>
+  <div class="grid cols-3">
+    {% for p in pg.programs %}
+    <article class="card">
+      <h3>{{ p.title }}</h3>
+      <p>{{ p.desc }}</p>
+      <p><strong>Trukmė:</strong> {{ p.duration }}</p>
+      <p><strong>Formatas:</strong> {{ p.format }}</p>
+      <p><strong>Tikslinė auditorija:</strong> {{ p.audience }}</p>
+      <p><strong>Kaina:</strong> {{ p.price }}</p>
+      <p><strong>Finansavimas:</strong> {{ p.financing }}</p>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="card">
+  <h2>Kurso turinys</h2>
+  <div class="grid cols-3">
+    <div class="card">
+      <h3>Skaitmeninės transformacijos</h3>
+      <ul>
+        {% for i in pg.curriculum.transformacija %}<li>{{ i }}</li>{% endfor %}
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Digital Marketing</h3>
+      <ul>
+        {% for i in pg.curriculum.marketingas %}<li>{{ i }}</li>{% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="card">
+  <h2>Dėstytojai</h2>
+  <div class="grid cols-3">
+    <div class="card">
+      <h3>Skaitmeninė transformacija</h3>
+      <ul>{% for t in pg.teachers.transformacija %}<li>{{ t }}</li>{% endfor %}</ul>
+    </div>
+    <div class="card">
+      <h3>Digital Marketing</h3>
+      <ul>{% for t in pg.teachers.marketingas %}<li>{{ t }}</li>{% endfor %}</ul>
+    </div>
+  </div>
+</section>
+
+<section class="card">
+  <h2>Atsiliepimai</h2>
+  <ul>
+    {% for t in pg.testimonials %}
+      <li>“{{ t.quote }}” — {{ t.author }}</li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section id="registracija" class="card">
+  <h2>Registracijos forma</h2>
+  <form name="mini-mba" method="POST" netlify data-netlify="true" action="/thanks">
+    <input type="hidden" name="form-name" value="mini-mba">
+    {% for f in pg.form.fields %}
+      <p><label>{{ f }}<br>
+        {% if f == 'Kursas' %}
+          <select name="kursas">{% for c in pg.form.courses %}<option value="{{ c }}">{{ c }}</option>{% endfor %}</select>
+        {% else %}
+          <input name="{{ f | slug }}" required>
+        {% endif %}
+      </label></p>
+    {% endfor %}
+    <button class="btn primary" type="submit">Registruotis</button>
+  </form>
+</section>
+
+

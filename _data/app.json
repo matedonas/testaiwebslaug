@@ -7,7 +7,8 @@
       {"label": "Finansavimas", "href": "/finansavimas"},
       {"label": "Registracija", "href": "/registracija"},
       {"label": "Verslui", "href": "/verslui"},
-      {"label": "Kontaktai", "href": "/kontaktai"}
+      {"label": "Kontaktai", "href": "/kontaktai"},
+      {"label": "Mini‑MBA", "href": "/mini-mba"}
     ],
     "footer": {
       "addresses_line": "Bistryčios g. 13, Vilnius / Kalantos g. 19, Kaunas / Jūros g. 4, Klaipėda / Vilniaus g. 88, Šiauliai / Savanorių a. 13, Panevėžys / Naujoji g. 3, Alytus",
@@ -134,6 +135,69 @@
       "overview": "Slaugytojų padėjėjų darbo funkcijos yra labai svarbios, jos turi artimą kontaktą su pacientais ir atlieka įvairias užduotis...",
       "sections": ["Atsakomybės", "Reikalingos savybės", "Karjeros kelias"],
       "links": []
+    },
+    "minimba": {
+      "hero": {
+        "headline": "Transformuokite savo karjerą su Mini‑MBA programomis",
+        "subline": "Įgykite pažangiausių skaitmeninių įgūdžių ir tapkite lyderiu šiuolaikinėje verslo aplinkoje.",
+        "primaryCta": {"label": "Registruokitės dabar", "href": "#registracija"}
+      },
+      "programs": [
+        {
+          "title": "Skaitmeninės transformacijos mini‑MBA",
+          "desc": "Pirmoji Lietuvoje Skaitmeninės transformacijos mini‑MBA – trumpesnė ir efektyvesnė Digital Transformation MBA alternatyva, sukurta Tech srities lyderių.",
+          "duration": "160 ak. val. per 10 mėnesių",
+          "format": "Vienas online paskaita per savaitę ir gyvas workshop’as kas mėnesį",
+          "audience": "Vadovams ir sprendimų priėmėjams",
+          "price": "€450/mėn arba €4,500 už visą kursą",
+          "financing": "Galimybė gauti finansavimą per Užimtumo tarnybą"
+        },
+        {
+          "title": "Digital Marketing mini‑MBA",
+          "desc": "Skirta CMO – komunikacijos ar rinkodaros vadovams, norintiems išplėsti arba atnaujinti savo skaitmeninius įgūdžius.",
+          "duration": "164 ak. val.",
+          "format": "Online paskaitos ir praktiniai užsiėmimai",
+          "audience": "Rinkodaros vadovams ir specialistams",
+          "price": "€760/mėn arba €7,600 už visą kursą",
+          "financing": "Galimybė gauti finansavimą per Užimtumo tarnybą"
+        }
+      ],
+      "curriculum": {
+        "transformacija": [
+          "Dirbtinis intelektas ir no‑code sprendimai",
+          "Skaitmeninis marketingas ir AI įrankiai",
+          "Verslo procesų analitika ir automatizacija",
+          "Kibernetinis saugumas ir rizikų valdymas",
+          "Vartotojų sąsajų ir patirties kūrimas"
+        ],
+        "marketingas": [
+          "SEO, PPC ir socialinių tinklų valdymas",
+          "Email marketingas ir e‑komercija",
+          "Duomenų analizė ir personalizacija",
+          "AI įrankiai ir automatizacija rinkodaroje",
+          "UX/UI dizainas ir vartotojo patirtis"
+        ]
+      },
+      "teachers": {
+        "transformacija": [
+          "Rokas Jurkėnas – Skaitmeninės transformacijos ekspertas",
+          "Sam Applebee – AI ir no‑code sprendimų specialistas",
+          "Žydrūnas Tamašauskas – Dirbtinio intelekto technologijų vadovas"
+        ],
+        "marketingas": [
+          "Kristupas Songaila – Skaitmeninės rinkodaros strategas",
+          "Simas Šarmavičius – SEO ir PPC ekspertas",
+          "Tomas Sakro – Socialinių tinklų ir automatizacijos specialistas"
+        ]
+      },
+      "testimonials": [
+        {"quote": "Ši programa padėjo man įgyti reikiamų įgūdžių ir pasitikėjimo savo gebėjimais.", "author": "Dainius Stasiulis"},
+        {"quote": "Praktiniai užsiėmimai ir dėstytojų patirtis buvo neįkainojami.", "author": "Viktorija Radžienė"}
+      ],
+      "form": {
+        "fields": ["Vardas", "Pavardė", "El. paštas", "Kursas"],
+        "courses": ["Skaitmeninės transformacijos mini‑MBA", "Digital Marketing mini‑MBA"]
+      }
     }
   },
   "styles": {
