@@ -29,9 +29,14 @@
 </head>
 <body>
   {% include "components/header.njk" %}
-  <main class="container">
+  <main class="container site-main">
     {{ content | safe }}
   </main>
+  <div class="wave-wrap" aria-hidden="true">
+    <svg class="wave" viewBox="0 0 1440 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,96L80,117.3C160,139,320,181,480,181.3C640,181,800,139,960,112C1120,85,1280,75,1360,69.3L1440,64L1440,200L1360,200C1280,200,1120,200,960,200C800,200,640,200,480,200C320,200,160,200,80,200L0,200Z" fill="currentColor"/>
+    </svg>
+  </div>
   {% include "components/footer.njk" %}
 </body>
 </html>
